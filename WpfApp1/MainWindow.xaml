@@ -1,0 +1,70 @@
+﻿<!--This is Main Window. Backgroud can be changed-->
+<Window x:Class="WpfApp1.MainWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="main_window">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFB1F3FF"/>
+                <GradientStop Color="#FF0B8C75" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid x:Name="DontMoveIt_1" HorizontalAlignment="Center" Height="381" VerticalAlignment="Center" Width="706">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="108*"/>
+                <ColumnDefinition Width="599*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <SolidColorBrush Color="#FFE6E6E6" Opacity="0.7"/>
+            </Grid.Background>
+
+            <!--Password Window-->
+            <Grid x:Name="PasswordBox" HorizontalAlignment="Left" Height="329" VerticalAlignment="Center" Width="452" Background="White" Grid.Column="1" Margin="20,0,0,0" Visibility="Visible">
+                <TextBox x:Name="UID_Box" HorizontalAlignment="Left" Margin="43,42,0,0" Width="378" Height="40" BorderBrush="Black" BorderThickness="2,2,2,2" VerticalAlignment="Top" TextAlignment="Center" FontSize="23" TextWrapping="WrapWithOverflow" RenderTransformOrigin="0.501,0.568" Background="#FFFCFCFC"/>
+                <TextBox x:Name="Pass_Box_Copy" HorizontalAlignment="Left" Margin="43,129,0,0" Width="378" Height="40" BorderBrush="Black" BorderThickness="2,2,2,2" VerticalAlignment="Top" TextAlignment="Center" FontSize="23" TextWrapping="WrapWithOverflow" RenderTransformOrigin="0.501,0.568" Background="#FFFCFCFC"/>
+                <Label x:Name="Pass_Hint1" Content="User ID" HorizontalAlignment="Left" Margin="43,16,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="Pass_Hint2" Content="Password" HorizontalAlignment="Left" Margin="43,98,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="Login_Button" Content="Login" HorizontalAlignment="Left" Height="59" Margin="71,190,0,0" VerticalAlignment="Top" Width="322" Background="#FF7FD3FF" FontFamily="SimSun" FontSize="36" Foreground="Black"/>
+                <Button x:Name="CloseButton" Content="&lt; Close This App" HorizontalAlignment="Center" Height="28" Margin="0,278,0,0" VerticalAlignment="Top" Width="242" Background="{x:Null}" FontSize="18" FontFamily="SimSun" Foreground="#FF4A4A4A" BorderBrush="{x:Null}"/>
+            </Grid>
+
+
+
+            <!--Menu List-->
+            <ListBox x:Name="FucList" HorizontalAlignment="Left" Height="329" Margin="10,0,0,0" VerticalAlignment="Center" Width="112" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="2" BorderBrush="Black"  FontFamily="SimSun" Visibility="Hidden"/>
+            
+            
+            
+            
+            
+            
+            <!--empty window-->
+            <Grid x:Name="SubWindow" Grid.Column="1" HorizontalAlignment="Left" Height="324" Margin="42,31,0,0" VerticalAlignment="Top" Width="518" Background="White" Visibility="Hidden"/>
+
+
+            <!--Inventory&View-->
+            <Grid x:Name="InvWindow" Grid.Column="1" HorizontalAlignment="Left" Height="324" Margin="42,31,0,0" VerticalAlignment="Top" Width="518" Background="White" Visibility="Hidden"/>
+
+            <!--Add new item-->
+            <Grid x:Name="AddWindow" Grid.Column="1" HorizontalAlignment="Left" Height="324" Margin="42,31,0,0" VerticalAlignment="Top" Width="518" Background="White" Visibility="Hidden"/>
+
+
+
+
+
+
+        </Grid>
+        <Button x:Name="DebugButton" Content="&gt;" HorizontalAlignment="Left" Height="69" Margin="717,355,0,0" VerticalAlignment="Top" Width="63" FontSize="24" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
+
+    
+    
+    
+    
